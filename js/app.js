@@ -141,6 +141,15 @@ JQ.Menu = Em.CollectionView.extend(JQ.Widget, {
   })
 });
 
+// Create a new Ember view for the jQuery Tabs widget
+JQ.Tabs = Em.View.extend(JQ.Widget, {
+    uiType: 'tabs',
+    uiOptions: ['active', 'collapsible', 'disabled', 'event', 'heightStyle', 'hide', 'show'],
+
+    tagName: 'div',
+    uiEvents: ['activate', 'beforeActivate', 'beforeLoad', 'create', 'load']
+});
+
 // Create a new Ember view for the jQuery UI Progress Bar widget
 JQ.ProgressBar = Em.View.extend(JQ.Widget, {
   uiType: 'progressbar',
