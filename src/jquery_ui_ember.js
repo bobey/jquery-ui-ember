@@ -140,11 +140,11 @@ JQ.Menu = Em.CollectionView.extend(JQ.Widget, {
 
 // Create a new Ember view for the jQuery Tabs widget
 JQ.Tabs = Em.View.extend(JQ.Widget, {
-    uiType: 'tabs',
-    uiOptions: ['active', 'collapsible', 'disabled', 'event', 'heightStyle', 'hide', 'show'],
+  uiType: 'tabs',
+  uiOptions: ['active', 'collapsible', 'disabled', 'event', 'heightStyle', 'hide', 'show'],
 
-    tagName: 'div',
-    uiEvents: ['activate', 'beforeActivate', 'beforeLoad', 'create', 'load']
+  tagName: 'div',
+  uiEvents: ['activate', 'beforeActivate', 'beforeLoad', 'create', 'load']
 });
 
 // Create a new Ember view for the jQuery UI Progress Bar widget
@@ -152,4 +152,20 @@ JQ.ProgressBar = Em.View.extend(JQ.Widget, {
   uiType: 'progressbar',
   uiOptions: ['value', 'max'],
   uiEvents: ['change', 'complete']
+});
+
+JQ.Draggable = Em.View.extend(JQ.Widget, {
+  uiType: 'draggable',
+  uiOptions: ['addClasses', 'appendTo', 'axis', 'cancel', 'connectToSortable', 'containment', 'cursor', 'cursorAt', 'delay', 'disabled', 'distance', 'grid', 'handle', 'helper', 'iframeFix', 'opacity', 'refreshPositions', 'revert', 'revertDuration', 'scope', 'scroll', 'scrollSensitivity', 'scrollSpeed', 'snap', 'snapMode', 'snapTolerance', 'stack', 'zIndex'],
+
+  tagName: 'div',
+  uiEvents: ['create', 'start', 'drag', 'stop']
+});
+
+JQ.Droppable = Em.View.extend(JQ.Widget, {
+  uiType: 'droppable',
+  uiOptions: ['accept', 'activeClass', 'addClasses', 'disabled', 'greedy', 'hoverClass', 'scope', 'tolerance'],
+
+  tagName: 'div',
+  uiEvents: ['create', 'activate', 'deactivate', 'over', 'out', 'drop']
 });
