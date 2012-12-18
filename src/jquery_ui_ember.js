@@ -154,6 +154,7 @@ JQ.ProgressBar = Em.View.extend(JQ.Widget, {
   uiEvents: ['change', 'complete']
 });
 
+// Create a new Ember view for the jQuery UI Draggable widget
 JQ.Draggable = Em.View.extend(JQ.Widget, {
   uiType: 'draggable',
   uiOptions: ['addClasses', 'appendTo', 'axis', 'cancel', 'connectToSortable', 'containment', 'cursor', 'cursorAt', 'delay', 'disabled', 'distance', 'grid', 'handle', 'helper', 'iframeFix', 'opacity', 'refreshPositions', 'revert', 'revertDuration', 'scope', 'scroll', 'scrollSensitivity', 'scrollSpeed', 'snap', 'snapMode', 'snapTolerance', 'stack', 'zIndex'],
@@ -162,6 +163,7 @@ JQ.Draggable = Em.View.extend(JQ.Widget, {
   uiEvents: ['create', 'start', 'drag', 'stop']
 });
 
+// Create a new Ember view for the jQuery UI Droppable widget
 JQ.Droppable = Em.View.extend(JQ.Widget, {
   uiType: 'droppable',
   uiOptions: ['accept', 'activeClass', 'addClasses', 'disabled', 'greedy', 'hoverClass', 'scope', 'tolerance'],
