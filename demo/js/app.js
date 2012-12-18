@@ -44,8 +44,8 @@ App.ProgressBar = JQ.ProgressBar.extend({
   // When the jQuery UI progress bar reaches 100%, it will invoke the
   // `complete` event. Recall that JQ.Widget registers a callback for
   // the `complete` event in `didInsertElement`, which calls the
-  // `complete` method.
-  complete: function() {
+  // `jQueryUIComplete` method.
+  jQueryUIComplete: function() {
     // When the progress bar finishes, update App.controller with the
     // list of people. Because our template binds the JQ.Menu to this
     // value, it will automatically populate with the new people and

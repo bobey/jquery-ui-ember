@@ -81,7 +81,11 @@ JQ.Widget = Em.Mixin.create({
     var uiEvents = this.get('uiEvents') || [], self = this;
 
     uiEvents.forEach(function(event) {
-      var callback = self[event];
+      // jQuery UI Events will be prefixed by *jQueryUI* key to avoid native
+      // events collisions.
+      // First letter of native jQueryUI event key is upper cased so we could
+      // use a nice CamelCase keyword for jQueryUI events.
+      var callback = self['jQueryUI' + event.charAt(0).toUpperCase() + event.slice(1)];
 
       if (callback) {
         // You can register a handler for a jQuery UI event by passing
@@ -97,6 +101,7 @@ JQ.Widget = Em.Mixin.create({
 JQ.Button = Em.View.extend(JQ.Widget, {
   uiType: 'button',
   uiOptions: ['label', 'disabled'],
+  uiEvents: ['create'],
 
   tagName: 'button'
 });
