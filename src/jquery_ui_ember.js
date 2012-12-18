@@ -1,5 +1,7 @@
 // Put jQuery UI inside its own namespace
-JQ = {};
+(function() {
+    window.JQ = Ember.Namespace.create();
+})();
 
 // Create a new mixin for jQuery UI widgets using the Ember
 // mixin syntax.
