@@ -178,3 +178,13 @@ JQ.Droppable = Em.View.extend(JQ.Widget, {
   tagName: 'div',
   uiEvents: ['create', 'activate', 'deactivate', 'over', 'out', 'drop']
 });
+
+
+// Create a new Ember view for the jQuery UI Dialog widget
+JQ.Dialog = Em.View.extend(JQ.Widget, {
+    uiType: 'dialog',
+    uiOptions: ['autoOpen', 'buttons', 'closeOnEscape', 'closeText', 'dialogClass', 'draggable', 'height', 'hide', 'maxHeight', 'maxWidth', 'minHeight', 'minWidth', 'modal', 'position', 'resizable', 'show', 'stack', 'title', 'width', 'zindex'],
+
+    tagName: 'div',
+    uiEvents: ['beforeClose', 'create', 'open', 'focus', 'dragStart', 'drag', 'dragStop', 'resizeStart', 'resize', 'resizeStop', 'close']
+});
