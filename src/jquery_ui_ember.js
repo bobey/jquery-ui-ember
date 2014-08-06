@@ -17,7 +17,16 @@ JQ.Widget = Em.Mixin.create({
 
     // Create a new instance of the jQuery UI widget based on its `uiType`
     // and the current element.
-    var ui = jQuery.ui[this.get('uiType')](options, this.get('element'));
+    var namespace = 'ui';
+    var uiType = this.get('uiType');
+
+    if (uiType.indexOf('.') >= 0) {
+      var parts = uiType.split('.');
+      namespace = parts[0];
+      uiType = parts[1];
+    }
+
+    var ui = jQuery[namespace][uiType](options, this.get('element'));
 
     // Save off the instance of the jQuery UI widget as the `ui` property
     // on this Ember view.
